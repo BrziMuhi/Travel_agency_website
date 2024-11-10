@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+}
+main{
+   margin-left: 20px;
+   margin-right: 20px;
+}
+header{
+    background-color: hsl(152, 51%, 47%);
+    text-align: center; 
+    padding: 25px;
+
+}
+.navbar{
+    background-color: hsl(128, 63%, 40%);
+    height: 50px;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: hsl(152, 73%, 29%);
+    text-decoration: none;
+    padding: 15px;
+    margin: 0px;
+    overflow: hidden;
+}
+.navbar a{
+    color:white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: hsl(152, 51%, 47%);
+}
+.navbar li{
+    float: left;
+}
