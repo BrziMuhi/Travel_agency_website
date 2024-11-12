@@ -1,5 +1,12 @@
 body{
     margin: 0;
+    background-image:url(una.jpg); 
+    font-family: "Sour Gummy";
+    background-image: url(pcitures/sarajevo.jpg);
+    background-position: c;
+    background-repeat: repeat;
+    background-size: cover ;
+    background-attachment: fixed;
 }
 main{
    margin-left: 20px;
@@ -9,6 +16,8 @@ header{
     background-color: hsl(152, 51%, 47%);
     text-align: center; 
     padding: 25px;
+    font-family: "Sour Gummy";
+   
 
 }
 .navbar{
@@ -35,4 +44,7 @@ header{
 }
 .navbar li{
     float: left;
+}
+.p{
+    te
 }
