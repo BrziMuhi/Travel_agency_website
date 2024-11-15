@@ -1,7 +1,7 @@
 body{
     margin: 0;   
     font-family: "Sour Gummy";
-    background-image: url(pictures/car.jpg);
+    background-image: url(pictures/picutre1.JPG);
     background-position: center;
     background-size: cover ;
     background-attachment: fixed;
@@ -48,7 +48,4 @@ header{
 .navbar li{
     margin: 0 15px;
     float: left;
-}
-.p{
-    te
 }
