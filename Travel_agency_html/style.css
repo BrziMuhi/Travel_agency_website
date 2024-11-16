@@ -1,12 +1,37 @@
-body{
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body {
     margin: 0;  
     padding: 0;
     height: 100%; 
     font-family: "Sour Gummy";
-    background-image: url(pictures/picutre1.JPG);
-    background-position: center;
-    background-size: cover ;
+    background-color: hsl(160, 100%, 75%);
+    background-image: url(pictures/favicon.jpeg), url(pictures/picutre1.JPG) , url(pictures/7830.JPG);
+    background-position: center,left,right ;
     background-attachment: fixed;
+    background-size: contain,contain, contain;  
+    background-repeat: no-repeat, no-repeat , no-repeat;  
+    
+}
+#container{
+    min-height: 100%;
+}
+#main{
+    overflow: auto;
+    padding-bottom: 100px;
+}
+#footer{
+    background-color:  hsl(150, 50%, 50%);
+    text-align: center; 
+    padding: 1px 0;
+    font-family: "Sour Gummy";
+    position: relative;
+    height: 100px;
+    margin-top: -100px;
+    clear: both;
+     
 }
 main{
     margin-top: 100px;
@@ -52,13 +77,6 @@ header{
 .navbar li{
     margin: 0px;
     float: left;
-}    
-footer{
-    
-    background-color:  hsl(150, 50%, 50%);
-    text-align: center; 
-    padding: 1px 0;
-    font-family: "Sour Gummy";
 }
  form{
     margin-left: 10px;
