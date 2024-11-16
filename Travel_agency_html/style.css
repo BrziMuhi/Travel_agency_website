@@ -13,17 +13,17 @@ a{
 }
 
 html, body{
-    background-color:hsl(120, 26%, 89%) ;
+    background-color:hsl(120, 17%, 32%) ;
+    background-image: url(pictures/favicon.jpeg);
+    background-blend-mode:hard-light;
     font-family: "Inter", sans-serif ;
-    height: 100vh;
-    padding-top: 60px;
-    margin: 0;
-  
-
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
  .header{
     background-color: hsl(120, 31%, 51%) ;
-    border-bottom: 1px solid hsl(130, 70%, 77%);
+    border-bottom: 1px solid hsl(130, 84%, 13%);
     position: fixed;
     width: 100%;
     backdrop-filter: blur(6px);
@@ -34,7 +34,7 @@ html, body{
     align-items: center ;
     justify-content: space-between;
     padding: 0 30px;
-    min-height: 60px;
+    min-height: 50px;
  }
  .logo{
     font-size: 25px;
@@ -42,7 +42,7 @@ html, body{
     font-weight: 600;
  }
  .nav{
-
+    font-size: 15px;
  }
  .nav_list{
    display: flex;
@@ -82,6 +82,7 @@ html, body{
  .heading{
     color: darkgreen;
     font-size: 50px;
+    margin-top: 20px;
     margin-bottom: 20px;
  
 
@@ -91,34 +92,19 @@ html, body{
     font-size: 20px;
     max-width: 1000px;
     margin: 0 auto;
+
  }
- .contentf{
-    flex:1;
- }
- .wrapper{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2px;
-    padding-right: 2px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-}
  footer {
-    background-color: hsl(120, 31%, 51%) ;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    padding: 10px 0;
+   margin-top: auto;
+   background-color: hsl(120, 31%, 51%) ;
+   color: white;
+   text-align: center;
+   justify-content: space-between;
+  
+  
 
 }
+
  @media(max-width: 850px){
     .header_content{
         flex-direction: column;
