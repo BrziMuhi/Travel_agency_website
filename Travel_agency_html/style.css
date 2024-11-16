@@ -14,7 +14,7 @@ a{
 
 html, body{
     background-color:hsl(120, 17%, 32%) ;
-    background-image: url(pictures/favicon.jpeg);
+    background-image: url(pictures/favicn.jpeg);
     background-blend-mode:hard-light;
     font-family: "Inter", sans-serif ;
     min-height: 100vh;
