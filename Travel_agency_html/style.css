@@ -13,7 +13,7 @@ a{
 }
 
 html, body{
-    background-color:hsl(120, 17%, 32%) ;
+    background-color:hsl(98, 36%, 74%) ;
     background-image: url(pictures/favicn.jpeg);
     background-blend-mode:hard-light;
     font-family: "Inter", sans-serif ;
@@ -23,10 +23,9 @@ html, body{
 }
  .header{
     background-color: hsl(120, 31%, 51%) ;
-    border-bottom: 1px solid hsl(130, 84%, 13%);
+    border-bottom: 1px solid hsl(98, 36%, 74%);
     position: fixed;
     width: 100%;
-    backdrop-filter: blur(6px);
     top: 0px;
  }
  .header_content{
@@ -35,6 +34,7 @@ html, body{
     justify-content: space-between;
     padding: 0 30px;
     min-height: 50px;
+    animation: fade 0.5s;
  }
  .logo{
     font-size: 25px;
@@ -93,6 +93,7 @@ html, body{
     max-width: 1000px;
     margin: 0 auto;
 
+ 
  }
  footer {
    margin-top: auto;
@@ -100,10 +101,9 @@ html, body{
    color: white;
    text-align: center;
    justify-content: space-between;
-  
-  
-
+   display: flex;   
 }
+
 
  @media(max-width: 850px){
     .header_content{
@@ -125,4 +125,14 @@ html, body{
     100%{
         opacity: 1;
     }
+ }
+ @keyframes fade{
+   0%{
+      opacity: 0;
+      transform: translateY(15px);
+   }
+   100%{
+      opacity: 1;
+      transform: translate(0px);
+   }
  }

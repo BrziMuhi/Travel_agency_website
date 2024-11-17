@@ -9,6 +9,82 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Travel USK</title>
+    <style>
+       .main{
+        padding: 20px;
+       }
+       .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+       }
+       .form{
+        align-items: center;
+        gap: 10px;
+        flex: 1;
+        border: solid black ;
+        border-radius: 30px;
+        width: 500px !important;
+       }
+       .name{
+        flex-direction: column;
+        border-radius: 20px;
+        width: 400px;
+
+         
+       }
+       .btn1{
+        background-color: darkgreen;
+         color: white;
+         padding: 7px 10px;
+         border-radius: 5000px;
+         transition: all 0.4s;
+         width: 100px   ;
+       
+       
+        
+
+       }
+       #txtarea{
+        border-radius: 20px;
+       }
+       .map{
+        flex: 1;
+        display: flex;
+        justify-content: right;
+
+       }
+       .map iframe{
+        width: 600px;
+        height: 500px;
+        border: none;
+        border-radius: 30px;
+       }
+       @media(max-width:850px){
+        .map iframe{
+            width: 1px;
+            height: 1px;
+            border: none;
+        }
+        .map{
+            justify-content: center;
+        }
+        .form{
+        flex: 1;
+        text-align: center;
+        align-items: center;
+        border: solid black;
+        border-radius: 30px;
+        height: 300px;
+        width: 200px;
+        }
+        #txtarea{
+            border-radius: 10px;
+            width: 200px;
+        }
+       }
+    </style>
 </head> 
 <body>
     <header class="header">
@@ -37,13 +113,25 @@
 
         </div>
     </header>
-    <main class="main">
+    <div class="main">
         <h1 class="heading">Contact</h1>
-        <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur voluptas atque blanditiis quos molestias sunt possimus! Explicabo placeat, commodi temporibus veniam voluptate ipsa reprehenderit dolores sunt quod facilis inventore perspiciatis.</p>
-        <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d841.5502627171066!2d15.859739495067268!3d44.80880203453127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sbs!2sba!4v1731783913273!5m2!1sbs!2sba" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="content">
+               <form action="https://jsonplaceholder.typicode.com/posts" class="form" method="POST">
+                <label for="name"></label>
+                <input class="name" type="text" id="name" placeholder="Name" required><br>
+                <label for="email"></label>
+                <input class="email" type="email" id="email" placeholder="Email" required><br>
+                <label for="txtarea" ></label><br>
+                <textarea id="txtarea" rows="15" cols="60" placeholder="Message"></textarea><br><br><br>
+                <button class="btn1" type="submit">SEND</button> 
+               </form>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d841.5502627171066!2d15.859739495067268!3d44.80880203453127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sbs!2sba!4v1731783913273!5m2!1sbs!2sba" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                ></iframe>
+            </div>
         </div>
-    </main>
+    </div>
+    
     <footer class="footer">
         <p class="crs_name">IBU 061 - Foundations of Web Development</p>
         <p class="name">Muhamed Šekić</p>
