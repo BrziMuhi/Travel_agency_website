@@ -10,80 +10,188 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Travel USK</title>
     <style>
-       .main{
-        padding: 20px;
-       }
-       .content{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-       
-       }
-       .form{
-        align-items: center;
-        gap: 10px;
-        flex: 1;
-        border: solid black ;
-        border-radius: 30px;
-        width: 500px !important;
-       }
-       .name{
-        flex-direction: column;
-        border-radius: 20px;
-        width: 400px;
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: inherit;
+   text-decoration: none; 
+}
 
-         
-       }
-       .btn1{
-        background-color: darkgreen;
-         color: white;
-         padding: 7px 10px;
-         border-radius: 5000px;
-         transition: all 0.4s;
-         width: 100px   ;
-       
-       
-        
+html, body{
+    background-color:hsl(98, 32%, 75%) ;
+    background-image: url(pictures/bg-pattern2.jpeg);
+    background-blend-mode:hard-light;
+    font-family: "Inter", sans-serif ;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+ .header{
+    background-color: hsl(120, 31%, 51%) ;
+    border-bottom: 1px solid hsl(98, 36%, 74%);
+    position: fixed;
+    width: 100%;
+    top: 0px;
+ }
+ .header_content{
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+    padding: 0 30px;
+    min-height: 50px;
+    animation: fade 0.5s;
+ }
+ .logo{
+    font-size: 25px;
+    letter-spacing: -1.5px;
+    font-weight: 600;
+ }
+ .nav{
+    font-size: 15px;
+ }
+ .nav_list{
+   display: flex;
+   column-gap: 40px;
 
-       }
-       #txtarea{
-        border-radius: 20px;
-       }
-       .map{
-        flex: 1;
-        display: flex;
-        justify-content: right;
+ }
+ .nav_items{
+     
+ }
+ .nav_link{
+    color: hsl(0, 100%, 99%);
+    font: weight 500px;
+    font-size: 15px;
+    transition: all 0.4s;
+ }
+ .btn{
+    background-color: darkgreen;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 5000px;
+    transition: all 0.4s;
+ }
+ .btn:hover{
+    color: hsl(138, 62%, 28%);
+ }
+.nav_link:hover{
+    color: hsl(138, 62%, 28%);
 
-       }
-       .map iframe{
-        width: 600px;
-        height: 500px;
-        border: none;
-        border-radius: 30px;
-       }
-       @media(max-width:850px){
-        .map iframe{
-            width: 1px;
-            height: 1px;
-            border: none;
-        }
-        .map{
-            justify-content: center;
-        }
-        .form{
-        flex: 1;
-        text-align: center;
-        align-items: center;
-        border: solid black;
-        border-radius: 30px;
-        height: 300px;
-        width: 200px;
-        }
-        #txtarea{
-            border-radius: 10px;
-            width: 200px;
-        }
-       }
+}
+  .contact-container {
+    margin-top: 20px;
+    padding-top: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contact-form textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .contact-form button {
+    background-color: hsl(120, 100%, 20%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: rgb(71, 128, 71);
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+  }
+  
+  .contact-info .info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: darkgreen;
+  }
+  
+  .contact-info .location-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 200px;
+  }
+  footer {
+   margin-top: auto;
+   background-color: hsl(120, 31%, 51%) ;
+   color: white;
+   text-align: center;
+   justify-content: space-between;
+   display: flex;   
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+ }
+ @keyframes fade{
+   0%{
+      opacity: 0;
+      transform: translateY(15px);
+   }
+   100%{
+      opacity: 1;
+      transform: translate(0px);
+   }
+ }
+  
+  
+  @media (max-width: 850px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .contact-info {
+      order: 2; 
+    }
+  }
     </style>
 </head> 
 <body>
@@ -113,24 +221,26 @@
 
         </div>
     </header>
-    <div class="main">
-        <h1 class="heading">Contact</h1>
-        <div class="content">
-               <form action="https://jsonplaceholder.typicode.com/posts" class="form" method="POST">
-                <label for="name"></label>
-                <input class="name" type="text" id="name" placeholder="Name" required><br>
-                <label for="email"></label>
-                <input class="email" type="email" id="email" placeholder="Email" required><br>
-                <label for="txtarea" ></label><br>
-                <textarea id="txtarea" rows="15" cols="60" placeholder="Message"></textarea><br><br><br>
-                <button class="btn1" type="submit">SEND</button> 
-               </form>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d841.5502627171066!2d15.859739495067268!3d44.80880203453127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sbs!2sba!4v1731783913273!5m2!1sbs!2sba" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
-                ></iframe>
-            </div>
+    <main class="contact-container">
+        <form action=" https://jsonplaceholder.typicode.com/posts" class="contact-form">
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+    
+        <div class="contact-info">
+          <div class="info">
+            <h3>Contact Info</h3>
+            <p>Street: Mimara Hajredina br.4</p>
+            <p>City: Bihać 77 000</p>
+            <p>Next to Karakas insurance company</p>
+            <p>Num:+387 60 30 39 395</p>
+            <p>Email:muhamed.sekic@stu.ibu.edu.ba</p>
+          </div>
+          <img src="pictures/Screenshot (5).png" alt="Location Placeholder" class="location-img">
         </div>
-    </div>
+      </main>
     
     <footer class="footer">
         <p class="crs_name">IBU 061 - Foundations of Web Development</p>
