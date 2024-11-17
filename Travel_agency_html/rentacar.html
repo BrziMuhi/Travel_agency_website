@@ -9,7 +9,216 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: inherit;
+   text-decoration: none; 
+}
+
+html, body{
+    background-color:hsl(98, 36%, 74%) ;
+    background-image: url(pictures/bg-pattern2.jpeg);
+    background-blend-mode:hard-light;
+    font-family: "Inter", sans-serif ;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+ .header{
+    background-color: hsl(120, 31%, 51%) ;
+    border-bottom: 1px solid hsl(98, 36%, 74%);
+    background-image: url(pictures/pattern2.jpeg);
+    position: fixed;
+    width: 100%;
+    top: 0px;
+ }
+ .header_content{
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+    padding: 0 30px;
+    min-height: 50px;
+    animation: fade 0.5s;
+ }
+ .logo{
+    font-size: 25px;
+    letter-spacing: -1.5px;
+    font-weight: 600;
+ }
+ .nav{
+    font-size: 15px;
+ }
+ .nav_list{
+   display: flex;
+   column-gap: 40px;
+
+ }
+ .nav_items{
+     
+ }
+ .nav_link{
+    color: hsl(0, 100%, 99%);
+    font: weight 500px;
+    font-size: 15px;
+    transition: all 0.4s;
+ }
+ .btn{
+    background-color: darkgreen;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 5000px;
+    transition: all 0.4s;
+ }
+ .btn:hover{
+    color: hsl(130, 35%, 62%);
+ }
+.nav_link:hover{
+    color: hsl(130, 35%, 62%);
+
+}
+
+.car_listing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+
+.car_card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.car_card:hover {
+    transform: translateY(-5px);
+}
+
+.car_card img {
+    width: 100%;
+    height: auto;
+}
+
+.car_card h3 {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.car_card ul {
+    list-style: none;
+    padding: 15px;
+}
+
+.car_card ul li {
+    margin-bottom: 8px;
+}
+
+.car_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+}
+
+.car_price span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.car_price button {
+    background-color: hsl(133, 46%, 20%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.car_price button:hover {
+    background-color: #218838;
+}
+
+footer {
+   margin-top: auto;
+   background-color:  hsl(120, 31%, 51%) ;
+   background-image: url(pictures/pattern2.jpeg);
+   color: rgb(255, 255, 255);
+   text-align: center;
+   justify-content: space-between;
+   display: flex;   
+}
+
+
+
+@media (max-width: 768px) {
+    .car-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+ @media(max-width: 850px){
+    .header_content{
+        flex-direction: column;
+        padding: 15px 0;
+        row-gap: 8px;
+    }
+    .nav_list{
+        column-gap: 18px;
+    }
+    .heading{
+        font-size: 40px;
+    }
+    .car_card {
+        width: 100%;
+    }
+
+    .car_price {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .car_price button{
+        width:100%;
+    }
  
+}
+ @keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+ }
+ @keyframes fade{
+   0%{
+      opacity: 0;
+      transform: translateY(15px);
+   }
+   100%{
+      opacity: 1;
+      transform: translate(0px);
+   }
+ }
     </style>
     <title>Travel USK</title>
 </head> 
@@ -40,15 +249,93 @@
 
         </div>
     </header>
-    <div class="pic">
-        <img src="pictures/car4.jpg" >
-        <img src="pictures/car3.jpg" >
-        <img src="pictures/car2.jpg" >
+    <div class="car_listing">
+       
+        <div class="car_card">
+            <img src="pictures/car2.jpg" alt="golf7">
+            <h3>Golf 7 GTI</h3>
+            <ul>
+                <li>🌡Air Conditioning</li>
+                <li>🚗 Seats: 5</li>
+                <li>📅 Year: 2018</li>
+                <li>⛽ Fuel: Dizel</li>
+                <li>⚙ Transmition: DSG Automatic</li>
+            </ul>
+            <div class="car_price">
+                <span>120KM</span>
+                <a href="https://www.ultimatespecs.com/car-specs/Volkswagen/65179/Volkswagen-Golf-7-GTI-Performance-20-TSI-230HP-.html" target="_blank"><button>Show Car</button></a>
+            </div>
+        </div>
+
+   
+        <div class="car_card">
+            <img src="pictures/car4.jpg" alt="golf6">
+            <h3>Golf 6 GTI</h3>
+            <ul>
+                <li>🌡Air Conditioning</li>
+                <li>🚗 Seats: 5</li>
+                <li>📅 Year: 2012</li>
+                <li>⛽ Fuel: Petrol</li>
+                <li>⚙ Transmition: DSG Automatic</li>
+            </ul>
+            <div class="car_price">
+                <span>80 KM</span>
+                <a href="https://www.ultimatespecs.com/car-specs/Volkswagen/12534/Volkswagen-Golf-6-5-doors-GTI-20-TSI-210HP-DSG.html" target="_blank"><button>Show Car</button></a>
+            </div>
+        </div>
+
+        <div class="car_card">
+            <img src="pictures/car7.jpg" alt="golf5">
+            <h3>Golf 5 </h3>
+            <ul>
+                <li>🌡Air Conditioning</li>
+                <li>🚗 Seats: 5</li>
+                <li>📅 Year: 2008</li>
+                <li>⛽ Fuel: Diesel</li>
+                <li>⚙ Transmition: DSG Automatic</li>
+            </ul>
+            <div class="car_price">
+                <span>50KM</span>
+                <a href="https://www.ultimatespecs.com/car-specs/Volkswagen/1261/Volkswagen-Golf-5-GT-20-TDI-170.html" target="_blank"><button>Show Car</button></a>
+            </div>
+        </div>
+
+        <div class="car_card">
+            <img src="pictures/car5.jpg" alt="skodaoctavia">
+            <h3>Skoda Octavia</h3>
+            <ul>
+                <li>🌡Air Conditioning</li>
+                <li>🚗 Seats: 5</li>
+                <li>📅 Year: 2016</li>
+                <li>⛽ Fuel: Disel</li>
+                <li>⚙ Transmition: 5 speed Manual</li>
+            </ul>
+            <div class="car_price">
+                <span>60 KM</span>
+                <a href="https://www.ultimatespecs.com/car-specs/Skoda/64936/Skoda-Octavia-3-16-TDI-CR-105HP-Elegance.html" target="_blank" ><button>Show Car</button></a>
+            </div>
+        </div>
+
+        <div class="car_card">
+            <img src="pictures/car6.jpg" alt="opelvivaro">
+            <h3>Opel Vivaro</h3>
+            <ul>
+                <li>🌡Air Conditioning</li>
+                <li>🚗 Seats: 9</li>
+                <li>📅 Year: 2018</li>
+                <li>⛽ Fuel: Disel</li>
+                <li>⚙ Transmition: 6 speed Manual</li>
+            </ul>
+            <div class="car_price">
+                <span>150 KM</span>
+                <a href="https://www.ultimatespecs.com/car-specs/Opel/112712/Opel-Vivaro-B-L1H1-2700-16-CDTI-BiTurbo-125.html" target="_blank"><button>Show Car</button></a>
+            </div>
+        </div>
+        
+        
     </div>
-    <main class="main">
-        <h1 class="heading">Rent a Car</h1>
-        <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur voluptas atque blanditiis quos molestias sunt possimus! Explicabo placeat, commodi temporibus veniam voluptate ipsa reprehenderit dolores sunt quod facilis inventore perspiciatis.</p>
-    </main>
+    
+    
     <footer class="footer">
         <p class="crs_name">IBU 061 - Foundations of Web Development</p>
         <p class="name">Muhamed Šekić</p>
