@@ -60,8 +60,8 @@ html, body{
     transition: all 0.4s;
  }
  .btn{
-    background-color: darkgreen;
-    color: white;
+    background-color: hsl(120, 100%, 20%);
+    color: hsl(0, 0%, 100%);
     padding: 7px 10px;
     border-radius: 5000px;
     transition: all 0.4s;
@@ -81,7 +81,7 @@ html, body{
   
  }
  .heading{
-    color: darkgreen;
+    color: hsl(120, 100%, 20%);
     font-size: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -100,7 +100,7 @@ html, body{
    margin-top: auto;
    background-color:  hsl(120, 31%, 51%) ;
    background-image: url(pictures/pattern2.jpeg);
-   color: rgb(255, 255, 255);
+   color: hsl(0, 0%, 100%);
    text-align: center;
    justify-content: space-between;
    display: flex;   
